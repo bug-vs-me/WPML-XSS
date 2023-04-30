@@ -1,0 +1,27 @@
+id: wp-xss
+
+info:
+  name: wp-xss
+  author: deepak
+  severity: high
+  description: wp-xss
+  reference:
+    - xss
+  remediation: update plugin.
+  tags: xss
+
+requests:
+  - method: GET
+    path:
+      - '{{BaseURL}}/wp-login.php?wp_lang=en_US%27'
+
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+
+      - type: word
+        part: body
+        words:
+          - '#039;"='

@@ -2,12 +2,12 @@ id: wp-xss
 
 info:
   name: wp-xss
-  author: deepak
+  author: deepak aka bugvsme
   severity: high
-  description: wp-xss
+  description: WordPress Plugin WPML Version < 4.6.1  RXSS vulnerability
   reference:
     - xss
-  remediation: update plugin.
+  remediation: update plugin to latest version
   tags: xss
 
 requests:
